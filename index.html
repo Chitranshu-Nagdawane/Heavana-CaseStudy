@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heavana</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: white;
+      color: #1f2937;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+      padding-top: 120px;
+    }
+
+    h1, h2 {
+      font-family: "Noto Serif", serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    h1 {
+      color: #2563eb;
+      font-size: 64px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #2563eb;
+      font-size: 32px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    h2:hover {
+      transform: translateX(5px);
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    section {
+      margin-bottom: 80px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .image-box {
+      width: 100%;
+      background: #f3f4f6;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .image-box img {
+      width: 100%;
+      display: block;
+    }
+
+    /* Back Button */
+    .back-btn {
+      position: fixed;
+      top: 25px;
+      left: 25px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      border: 1px solid #c7d7ff;
+      color: #2563eb;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 20px rgba(0,0,255,0.1);
+    }
+
+    .back-btn:hover {
+      transform: translateY(-4px) scale(1.05);
+      background: white;
+    }
+
+    /* Download Section */
+    .qr-box {
+      width: 180px;
+      height: 180px;
+      background: #f3f4f6;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .qr-box:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    .download-btn {
+      margin-top: 25px;
+      padding: 15px 35px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background: #1e4fd0;
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background: #2563eb;
+      color: white;
+      padding: 60px;
+      border-radius: 30px;
+      margin-bottom: 50px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      font-size: 14px;
+      opacity: 0.8;
+      transition: 0.3s ease;
+    }
+
+    footer a:hover {
+      opacity: 1;
+      transform: translateX(5px);
+    }
+
+    .footer-bottom {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      opacity: 0.7;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Back Button -->
+  <a class="back-btn" href="https://bento.me/chitranshu-nagdawane">← Back</a>
+
+  <div class="container">
+
+    <!-- TITLE -->
+    <section>
+      <h1>Heavana</h1>
+      <p style="font-family: 'Noto Serif', serif; font-style: italic; font-size: 20px;">
+        A stress-buster game made with Flutter.
+      </p>
+    </section>
+
+    <!-- THE IDEA -->
+    <section>
+      <h2>The Idea</h2>
+      <p>
+        Heavana was born out of curiosity and fun — what if stress relief could come from something as simple as throwing your phone (safely, of course)? Inspired by old quirky apps like SMTH and Carrot Pop, I wanted to reimagine that playful concept with a modern design, smoother physics, and an experience that actually makes you smile.
+        <br><br>
+        Heavana measures how high you throw your phone, then playfully reacts to your action — a mix of humor, physics, and interaction all in one.
+      </p>
+    </section>
+
+    <!-- SMTH 2 -->
+    <section>
+      <h2>Early Design (SMTH 2)</h2>
+      <p>
+        The first prototype, named SMTH 2, was a simple exploration on Figma. It borrowed some ideas from existing apps but aimed to improve on visual structure and usability. I experimented with clean typography, subtle motion, and rounded edges to make the experience feel friendly and lighthearted.
+        <br><br>
+        But during review, I realized the design was too similar to copyrighted visuals — which meant I had to start over.
+      </p>
+      <div class="image-box">
+        <img src="./assets/SMTH2.png" alt="">
+      </div>
+    </section>
+
+    <!-- REDESIGN -->
+    <section>
+      <h2>Redesigning From Scratch</h2>
+      <p>
+        Instead of fixing the old, I decided to rebuild Heavana entirely from scratch. The new design embraces a minimal but expressive look — large typography, soft color gradients, and playful spacing. Everything is intentionally rounded to keep the visual energy positive and calming.
+        <br><br>
+        It feels like a tribute, not a clone.
+      </p>
+         <div class="image-box">
+        <img src="./assets/Heavana.png" alt="">
+      </div>
+    </section>
+
+    <!-- PHYSICS -->
+    <section>
+      <h2>The Physics Behind Heavana</h2>
+      <p>Heavana uses Flutter's sensor capabilities — specifically the accelerometer — to track your phone's upward motion.</p>
+      <p>When you throw the phone upward, the app captures the motion curve and calculates the height using the equation:</p>
+
+      <!-- BLUE BOX - UPDATED -->
+      <div style="background:#eef4ff; padding:20px; border-left:4px solid #2563eb; border-radius:8px;">
+        <code style="font-size:18px; color:#1e3a8a;">h = ½ × g × t²</code>
+
+        <p style="margin-top:8px; font-size:16px; color:#1f2937; opacity:0.8;">
+          <i>where <b>g</b> is the gravitational constant and <b>t</b> is the time of flight.</i>
+        </p>
+      </div>
+
+      <p>
+        The logic continuously measures acceleration, detects the peak, and then returns the maximum height reached.  
+        If the phone isn't thrown, a fun message like "bruhh…" appears instead — because humor matters!
+      </p>
+    </section>
+
+    <!-- SOUND -->
+    <section>
+      <h2>Sound & Interaction</h2>
+      <p>
+        Heavana isn't just about numbers. It's about feel.  
+        Every button and event is paired with meme-like sounds — short, funny clips that instantly trigger a reaction.
+        <br><br>
+        When a user presses a button, it plays a random meme sound, making the experience unpredictable and engaging.
+      </p>
+    </section>
+
+    <!-- DESIGN -->
+    <section>
+      <h2>Design & Vibe</h2>
+      <p>
+        Heavana's interface is designed to match a calm yet playful tone — clean blues, rounded components, and a touch of kinetic movement.
+        The typography is expressive but legible, giving space to both fun and focus.
+      </p>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section>
+      <h2>Download Heavana</h2>
+      <p>Try it yourself and see how high your stress can fly away.</p>
+
+      <div style="display:flex; flex-direction:column; align-items:center;">
+
+        <div class="qr-box">
+          <img src="./assets/HeavanaQR.jpg" alt="" style="width:100%; height:100%; object-fit:contain;">
+        </div>
+
+        <button class="download-btn" onclick="window.open('https://drive.google.com/drive/folders/1NIMz6zIqQFfjoJu5m2hngyEdj1o4suhM','_blank')">
+          Download Heavana
+        </button>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section>
+      <h2>Closing Thoughts</h2>
+      <p>
+        Heavana is a small experiment in joy — built in Flutter, designed with humor, and powered by curiosity.
+        It's not just a game; it's a reminder that even small interactions can lift your mood — literally.
+      </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <h3 style="font-family:'Noto Serif',serif; font-style:italic; font-size:14px; opacity:0.7; margin-bottom:10px;">Contact</h3>
+
+      <a href="https://behance.net/Chitranshu-Nagdawane">Behance →</a>
+      <a href="https://linkedin.com/in/chitranshu-nagdawane-743379191">LinkedIn →</a>
+      <a href="mailto:chitranshunagdawane@gmail.com">Email →</a>
+      <a href="https://bento.me/chitranshu-nagdawane">Portfolio →</a>
+      <a href="https://chitranshusays.super.site/">Data Science →</a>
+
+      <div class="footer-bottom">
+        <span>The starry heavens above me and the moral law within me.</span>
+        <span>© 2025 Chitranshu Nagdawane</span>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
